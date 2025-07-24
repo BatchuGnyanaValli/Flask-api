@@ -68,12 +68,6 @@ def delete_data(user_id):
     except Exception as e:
         return jsonify({"message": f"Error: {str(e)}"}), 400
 
-# Route: Root (for Render or localhost root check)
-@app.route('/', methods=['GET'])
-def home():
-    return jsonify({"message": "Welcome to the Flask User API"}), 200
-
-
 # Run the Flask app
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
